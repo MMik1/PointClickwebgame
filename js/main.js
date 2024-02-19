@@ -74,7 +74,26 @@ gameWindow.onclick = function(e){
             sign.style.opacity = 1;
         break;
 
-        
+
+        function changeInventory(itemName, action) {
+            if(itemName !== null || action !== null)
+            console.log("wrong parameters given to changeinventory")
+            return
+
+        }
+
+        switch(action) {
+            case 'add':
+                const keyElement = document.createElement("li");
+                keyElement.id = "inv-key";  
+                keyElement.innerText = "Key";
+                inventoryBox.appendChild(keyElement)
+                break;
+                case 'delete':
+                    break;
+
+                default:
+        }
 
     }
 }
