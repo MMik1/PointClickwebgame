@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <title>Point and click adventure</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Protest+Riot&display=swap"
+        rel="stylesheet">
+
+    <title>point and click adventure</title>
 </head>
 
 <body>
@@ -17,6 +19,7 @@
     </div>
 
     <div id="gameWindow">
+        <!--dialog bar-->
         <div id="dialogBar" class="foreground">
             <div id="setMainDialog">
                 <div id="mainCharacterSpeech" class="foreground"></div>
@@ -25,33 +28,32 @@
             </div>
         </div>
 
-
+        <!-- inventory -->
         <div id="inventoryBox" class="foreground">
             <p>Inventory</p>
-            <ul id inventoryList>
+            <ul id="inventoryList">
 
             </ul>
+            
         </div>
-        <!-- <div id="tilemap" class="foreground"></div> -->
 
         <!--Foreground items-->
         <div id="key1" class="foreground"></div>
         <div id="door1" class="foreground"></div>
         <div id="door2" class="foreground"></div>
+
         <div id="sign" class="foreground"></div>
-        
 
+        <!--Main character-->
+        <div id="mainCharacter" class="heroCharacter">
 
-        <!--MainCharacter-->
-        <div id="mainCharacter" class="heroCharacter"></div>
+        </div>
 
         <!--Background-->
         <div id="tilemap" class="background">
-        <img src="background/tilemap1.jpg" draggable="false" alt="tilemap level 1">
+            <img src="assets/img/tilemap1.jpg" draggable="false" alt="tilemap level 1">
+        </div>
     </div>
-
-
-    <div id="elementClass" class="element"></div>
     <script src="js/main.js"></script>
 </body>
 
