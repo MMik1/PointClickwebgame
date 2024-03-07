@@ -60,7 +60,7 @@ gameWindow.onclick = function (e) {
             setTimeout(showMessage, 16 * sec, mainCharacterSpeech, mcAudio, "I GRADE THIS BASEMENT A GOOD!");
             setTimeout(function() {
                 window.location.href = 'secondlvl.html';
-            }, 20000); // 18 seconds are 18000 milliseconds
+            }, 20000); 
                     } else {
                         //no -> alert 'door locked'
                         alert("Koelkast is locked!");
@@ -112,20 +112,15 @@ gameWindow.onclick = function (e) {
             }
             break;
 
-        case "statue":
-            showMessage(mainCharacterSpeech, mcAudio, "Wow a engelstatue..");
+        case "credits":
+            showMessage(mainCharacterSpeech, mcAudio, "Made by Mans Mik");
             setTimeout(function () { counterAvatarImg.style.opacity = 1; }, 4 * sec);
-            setTimeout(showMessage, 4 * sec, counterSpeech, cAudio, "I can talk if you did not known that.");
-            setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "How can you talk engel?");
-            setTimeout(showMessage, 12 * sec, counterSpeech, cAudio, "i got cursed by Tymon he is a witch..");
-            setTimeout(showMessage, 19 * sec, counterSpeech, cAudio, "I would escape if you can before Tymon will turn you into a statue.");
-            setTimeout(showMessage, 21 * sec, mainCharacterSpeech, mcAudio, "How can i escape engel?");
-            setTimeout(showMessage, 24 * sec, counterSpeech, cAudio, "I known there is a magicbook with more information how to learn a spell to open the door to get outsite this basement.");
-            setTimeout(function () { counterAvatarImg.style.opacity = 0; }, 28 * sec);
-            if (document.getElementById("statue") !== null) {
-                console.log('Found key!');
-                document.getElementById("statue").remove();
-                changeInventory('statue', 'add');
+            setTimeout(showMessage, 4 * sec, counterSpeech, cAudio, "Did i heard a explosion?");
+            setTimeout(function () { counterAvatarImg.style.opacity = 0; }, 7 * sec);
+            if (document.getElementById("credits") !== null) {
+                console.log('Found credits!');
+                document.getElementById("credits").remove();
+                changeInventory('credits', 'add');
             }
 
             break;
