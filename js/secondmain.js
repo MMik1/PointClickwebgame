@@ -1,4 +1,4 @@
-document.getElementById("mainTitle").innerText = "Point and Click adventure game";
+document.getElementById("mainTitle").innerText = "YOU ESCAPED THE BASEMENT GGS";
 
 //Game window reference
 const gameWindow = document.getElementById("gameWindow");
@@ -60,7 +60,7 @@ gameWindow.onclick = function (e) {
             setTimeout(showMessage, 16 * sec, mainCharacterSpeech, mcAudio, "I GRADE THIS BASEMENT A GOOD!");
             setTimeout(function() {
                 window.location.href = 'secondlvl.html';
-            }, 20000); 
+            }, 20000); // 18 seconds are 18000 milliseconds
                     } else {
                         //no -> alert 'door locked'
                         alert("Koelkast is locked!");
