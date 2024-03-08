@@ -1,4 +1,4 @@
-document.getElementById("mainTitle").innerText = "Point and Click adventure game";
+document.getElementById("mainTitle").innerText = "ESACPE THE BASEMENT";
 
 //Game window reference
 const gameWindow = document.getElementById("gameWindow");
@@ -55,12 +55,12 @@ gameWindow.onclick = function (e) {
                         
             showMessage(mainCharacterSpeech, mcAudio, "The hot pepper");
             setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "Okay im going to eat it");
-            setTimeout(showMessage, 11 * sec, mainCharacterSpeech, mcAudio, "Damm this is hot");
-            setTimeout(showMessage, 15 * sec, mainCharacterSpeech, mcAudio, "ITS SOOO HOTT OMG!!!");
-            setTimeout(showMessage, 20 * sec, mainCharacterSpeech, mcAudio, "I GRADE THIS BASEMENT A GOOD!");
+            setTimeout(showMessage, 13 * sec, mainCharacterSpeech, mcAudio, "Damm this is hot");
+            setTimeout(showMessage, 19 * sec, mainCharacterSpeech, mcAudio, "ITS SOOO HOTT OMG!!!");
+            setTimeout(showMessage, 25 * sec, mainCharacterSpeech, mcAudio, "I GRADE THIS BASEMENT A GOOD!");
             setTimeout(function() {
                 window.location.href = 'secondlvl.html';
-            }, 25000); 
+            }, 30000); 
                     } else {
                         //no -> alert 'door locked'
                         alert("Koelkast is locked!");
@@ -92,12 +92,12 @@ gameWindow.onclick = function (e) {
             setTimeout(showMessage, 35 * sec, mainCharacterSpeech, mcAudio, "What kinda spice do i need?");
             setTimeout(showMessage, 40 * sec, counterSpeech, cAudio, "You need a pepper do leave this house and eat it and then you can open the door");
             setTimeout(showMessage, 45 * sec, mainCharacterSpeech, mcAudio, "Thats easy...");
-            setTimeout(showMessage, 47 * sec, counterSpeech, cAudio, "Its not a regauler pepper its one of the most hottest peppers in the word if you eat it and you survive the door wil open.");
-            setTimeout(showMessage, 53 * sec, mainCharacterSpeech, mcAudio, "But that is not a spell");
-            setTimeout(showMessage, 56 * sec, counterSpeech, cAudio, "You need to say give me a good grate for this basement while eating the hot pepper. then the door wil open.");
-            setTimeout(showMessage, 64 * sec, mainCharacterSpeech, mcAudio, "So i need to grate this basement a good?");
-            setTimeout(showMessage, 68 * sec, counterSpeech, cAudio, "Yes you need to say that if you want to escape.");            
-            setTimeout(function () { counterAvatarImg2.style.opacity = 0; }, 71 * sec);
+            setTimeout(showMessage, 49 * sec, counterSpeech, cAudio, "Its not a regauler pepper its one of the most hottest peppers in the word if you eat it and you survive the door wil open.");
+            setTimeout(showMessage, 56 * sec, mainCharacterSpeech, mcAudio, "But that is not a spell");
+            setTimeout(showMessage, 61 * sec, counterSpeech, cAudio, "You need to say give me a good grate for this basement while eating the hot pepper. then the door wil open.");
+            setTimeout(showMessage, 66 * sec, mainCharacterSpeech, mcAudio, "So i need to grate this basement a good?");
+            setTimeout(showMessage, 71 * sec, counterSpeech, cAudio, "Yes you need to say that if you want to escape.");            
+            setTimeout(function () { counterAvatarImg2.style.opacity = 0; }, 77  * sec);
             if (document.getElementById("book") !== null) {
                 console.log('Found key!');
                 document.getElementById("book").remove();
