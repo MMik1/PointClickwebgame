@@ -23,6 +23,7 @@ const counterSpeech = document.getElementById("counterSpeech");
 const counterSpeech2 = document.getElementById("counterSpeech2");
 const mcAudio = document.getElementById("mcAudio");
 const cAudio = document.getElementById("cAudio");
+const eAudio = document.getElementById("eAudio");
 //Inventory
 const inventoryBox = document.getElementById("inventoryBox"); //div
 const inventoryList = document.getElementById("inventoryList"); //ul
@@ -44,79 +45,18 @@ gameWindow.onclick = function (e) {
     console.log(e.target.id);
     switch (e.target.id) {
 
-            case "koelkast":
-                if (gameState.door2locked == true) {
-                    // check if we have key
-                    if (document.getElementById("inv-book") !== null) {
-                        //yes -> unlock door?
-                        gameState.door2locked = false;
-                        changeInventory('book', 'delete');
-                        console.log('Door unlocked!');
-                        
-            showMessage(mainCharacterSpeech, mcAudio, "The hot pepper");
-            setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "Okay im going to eat it");
-            setTimeout(showMessage, 11 * sec, mainCharacterSpeech, mcAudio, "Damm this is hot");
-            setTimeout(showMessage, 13 * sec, mainCharacterSpeech, mcAudio, "ITS SOOO HOTT OMG!!!");
-            setTimeout(showMessage, 16 * sec, mainCharacterSpeech, mcAudio, "I GRADE THIS BASEMENT A GOOD!");
-            setTimeout(function() {
-                window.location.href = 'secondlvl.html';
-            }, 20000); 
-                    } else {
-                        //no -> alert 'door locked'
-                        alert("Koelkast is locked!");
-                    }
-                } else {
-                    console.log('Koelkast geopend');
-                }
-    
-                break;
-
-        case "sign":
-
-        if (gameState.booklocked == true) {
-            // check if we have key
-            if (document.getElementById("inv-statue") !== null) {
-                //yes -> unlock door?
-                gameState.booklocked = false;
-                changeInventory('statue', 'delete');
-                console.log('Door unlocked!');
-            
-            sign.style.opacity = 0.5;
-            showMessage(mainCharacterSpeech, mcAudio, "Wow this is the magicbook");
-            setTimeout(function () { counterAvatarImg2.style.opacity = 1; }, 4 * sec);
-            setTimeout(showMessage, 4 * sec, counterSpeech, cAudio, "I known where you coming for my friend.");
-            setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "How do you known that magicbook?");
-            setTimeout(showMessage, 12 * sec, counterSpeech, cAudio, "I heard you talking with Floris the engelstatue.");
-            setTimeout(showMessage, 15 * sec, counterSpeech, cAudio, "First before i give you the spell to leave this basement you need a spice before you can use the spel.");
-            setTimeout(showMessage, 21 * sec, mainCharacterSpeech, mcAudio, "What kinda spice do i need?");
-            setTimeout(showMessage, 24 * sec, counterSpeech, cAudio, "You need a pepper do leave this house and eat it and then you can open the door");
-            setTimeout(showMessage, 27 * sec, mainCharacterSpeech, mcAudio, "Thats easy...");
-            setTimeout(showMessage, 30 * sec, counterSpeech, cAudio, "Its not a regauler pepper its one of the most hottest peppers in the word if you eat it and you survive the door wil open.");
-            setTimeout(showMessage, 35 * sec, mainCharacterSpeech, mcAudio, "But that is not a spell");
-            setTimeout(showMessage, 38 * sec, counterSpeech, cAudio, "You need to say give me a good grate for this basement while eating the hot pepper. then the door wil open.");
-            setTimeout(showMessage, 42 * sec, mainCharacterSpeech, mcAudio, "So i need to grate this basement a good?");
-            setTimeout(showMessage, 45 * sec, counterSpeech, cAudio, "Yes you need to say that if you want to escape.");
-            setTimeout(function () { counterAvatarImg2.style.opacity = 0; }, 49 * sec);
-            if (document.getElementById("book") !== null) {
-                console.log('Found key!');
-                document.getElementById("book").remove();
-                changeInventory('book', 'add');
-            }
-
-             } else {
-            //no -> alert 'door locked'
-            alert("book is locked!");
-             }
-             } else {
-        console.log('book geopend');
-            }
-            break;
 
         case "credits":
             showMessage(mainCharacterSpeech, mcAudio, "Made by Mans Mik");
             setTimeout(function () { counterAvatarImg.style.opacity = 1; }, 4 * sec);
-            setTimeout(showMessage, 4 * sec, counterSpeech, cAudio, "Did i heard a explosion?");
-            setTimeout(function () { counterAvatarImg.style.opacity = 0; }, 7 * sec);
+            setTimeout(showMessage, 4 * sec, counterSpeech, eAudio, "BOOMM");
+            setTimeout(showMessage, 9 * sec, counterSpeech, cAudio, "Did i heard a explosion?");
+            setTimeout(showMessage, 14 * sec, mainCharacterSpeech, mcAudio, "I think so yea");
+            setTimeout(showMessage, 18 * sec, counterSpeech, cAudio, "I think the basement has been blownup by the chemicals");
+            setTimeout(showMessage, 23 * sec, mainCharacterSpeech, mcAudio, "In that case i would like to thank you for saving my live floris the statue");
+            setTimeout(showMessage, 28 * sec, mainCharacterSpeech, mcAudio, "And i also want to thank you Ricardo and Matthijs for this amazing experience website / game develoment in one");
+            setTimeout(function () { counterAvatarImg.style.opacity = 0; }, 38 * sec);
+            
             if (document.getElementById("credits") !== null) {
                 console.log('Found credits!');
                 document.getElementById("credits").remove();

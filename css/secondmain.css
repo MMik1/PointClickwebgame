@@ -51,25 +51,11 @@ p {
     left: 480px;
 }
 
-#koelkast {
-    width: 55px;
-    height: 128px;
-    top: 116px;
-    left: 651px;
-}
-
-#sign {
-    width: 26px;
-    height: 28px;
-    top: 433px;
-    left: 25px;
-}
-
 #credits {
     width: 49px;
     height: 62px;
-    top: 357px;
-    left: 399px;
+    top: 115px;
+    left: 436px;
     background-color: #000000;
 }
 
