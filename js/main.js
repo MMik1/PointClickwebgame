@@ -56,11 +56,11 @@ gameWindow.onclick = function (e) {
             showMessage(mainCharacterSpeech, mcAudio, "The hot pepper");
             setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "Okay im going to eat it");
             setTimeout(showMessage, 11 * sec, mainCharacterSpeech, mcAudio, "Damm this is hot");
-            setTimeout(showMessage, 13 * sec, mainCharacterSpeech, mcAudio, "ITS SOOO HOTT OMG!!!");
-            setTimeout(showMessage, 16 * sec, mainCharacterSpeech, mcAudio, "I GRADE THIS BASEMENT A GOOD!");
+            setTimeout(showMessage, 15 * sec, mainCharacterSpeech, mcAudio, "ITS SOOO HOTT OMG!!!");
+            setTimeout(showMessage, 20 * sec, mainCharacterSpeech, mcAudio, "I GRADE THIS BASEMENT A GOOD!");
             setTimeout(function() {
                 window.location.href = 'secondlvl.html';
-            }, 20000); 
+            }, 25000); 
                     } else {
                         //no -> alert 'door locked'
                         alert("Koelkast is locked!");
@@ -83,20 +83,21 @@ gameWindow.onclick = function (e) {
             
             sign.style.opacity = 0.5;
             showMessage(mainCharacterSpeech, mcAudio, "Wow this is the magicbook");
-            setTimeout(function () { counterAvatarImg2.style.opacity = 1; }, 4 * sec);
-            setTimeout(showMessage, 4 * sec, counterSpeech, cAudio, "I known where you coming for my friend.");
-            setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "How do you known that magicbook?");
-            setTimeout(showMessage, 12 * sec, counterSpeech, cAudio, "I heard you talking with Floris the engelstatue.");
-            setTimeout(showMessage, 15 * sec, counterSpeech, cAudio, "First before i give you the spell to leave this basement you need a spice before you can use the spel.");
-            setTimeout(showMessage, 21 * sec, mainCharacterSpeech, mcAudio, "What kinda spice do i need?");
-            setTimeout(showMessage, 24 * sec, counterSpeech, cAudio, "You need a pepper do leave this house and eat it and then you can open the door");
-            setTimeout(showMessage, 27 * sec, mainCharacterSpeech, mcAudio, "Thats easy...");
-            setTimeout(showMessage, 30 * sec, counterSpeech, cAudio, "Its not a regauler pepper its one of the most hottest peppers in the word if you eat it and you survive the door wil open.");
-            setTimeout(showMessage, 35 * sec, mainCharacterSpeech, mcAudio, "But that is not a spell");
-            setTimeout(showMessage, 38 * sec, counterSpeech, cAudio, "You need to say give me a good grate for this basement while eating the hot pepper. then the door wil open.");
-            setTimeout(showMessage, 42 * sec, mainCharacterSpeech, mcAudio, "So i need to grate this basement a good?");
-            setTimeout(showMessage, 45 * sec, counterSpeech, cAudio, "Yes you need to say that if you want to escape.");
-            setTimeout(function () { counterAvatarImg2.style.opacity = 0; }, 49 * sec);
+            setTimeout(function () { counterAvatarImg2.style.opacity = 1; }, 1 * sec);
+            setTimeout(showMessage, 5 * sec, counterSpeech, cAudio, "I known where you coming for my friend.");
+            setTimeout(showMessage, 10 * sec, mainCharacterSpeech, mcAudio, "How do you known that magicbook?");
+            setTimeout(showMessage, 14 * sec, counterSpeech, cAudio, "I heard you talking with Floris the engelstatue");
+            setTimeout(showMessage, 20 * sec, counterSpeech, cAudio, "First before i give you the spell to leave this basement");
+            setTimeout(showMessage, 28 * sec, counterSpeech, cAudio, "You need a spice before you can use the spel");
+            setTimeout(showMessage, 35 * sec, mainCharacterSpeech, mcAudio, "What kinda spice do i need?");
+            setTimeout(showMessage, 40 * sec, counterSpeech, cAudio, "You need a pepper do leave this house and eat it and then you can open the door");
+            setTimeout(showMessage, 45 * sec, mainCharacterSpeech, mcAudio, "Thats easy...");
+            setTimeout(showMessage, 47 * sec, counterSpeech, cAudio, "Its not a regauler pepper its one of the most hottest peppers in the word if you eat it and you survive the door wil open.");
+            setTimeout(showMessage, 53 * sec, mainCharacterSpeech, mcAudio, "But that is not a spell");
+            setTimeout(showMessage, 56 * sec, counterSpeech, cAudio, "You need to say give me a good grate for this basement while eating the hot pepper. then the door wil open.");
+            setTimeout(showMessage, 64 * sec, mainCharacterSpeech, mcAudio, "So i need to grate this basement a good?");
+            setTimeout(showMessage, 68 * sec, counterSpeech, cAudio, "Yes you need to say that if you want to escape.");            
+            setTimeout(function () { counterAvatarImg2.style.opacity = 0; }, 71 * sec);
             if (document.getElementById("book") !== null) {
                 console.log('Found key!');
                 document.getElementById("book").remove();
@@ -118,10 +119,10 @@ gameWindow.onclick = function (e) {
             setTimeout(showMessage, 4 * sec, counterSpeech, cAudio, "I can talk if you did not known that.");
             setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "How can you talk engel?");
             setTimeout(showMessage, 12 * sec, counterSpeech, cAudio, "i got cursed by Tymon he is a witch..");
-            setTimeout(showMessage, 19 * sec, counterSpeech, cAudio, "I would escape if you can before Tymon will turn you into a statue.");
-            setTimeout(showMessage, 21 * sec, mainCharacterSpeech, mcAudio, "How can i escape engel?");
-            setTimeout(showMessage, 24 * sec, counterSpeech, cAudio, "I known there is a magicbook with more information how to learn a spell to open the door to get outsite this basement.");
-            setTimeout(function () { counterAvatarImg.style.opacity = 0; }, 28 * sec);
+            setTimeout(showMessage, 18 * sec, counterSpeech, cAudio, "I would escape if you can before Tymon will turn you into a statue.");
+            setTimeout(showMessage, 22 * sec, mainCharacterSpeech, mcAudio, "How can i escape engel?");
+            setTimeout(showMessage, 26 * sec, counterSpeech, cAudio, "I known there is a magicbook with more information how to learn a spell to open the door to get outsite this basement.");
+            setTimeout(function () { counterAvatarImg.style.opacity = 0; }, 31 * sec);
             if (document.getElementById("statue") !== null) {
                 console.log('Found key!');
                 document.getElementById("statue").remove();
