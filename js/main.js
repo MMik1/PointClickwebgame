@@ -1,4 +1,4 @@
-document.getElementById("mainTitle").innerText = "WTF is Creativy?";
+document.getElementById("mainTitle").innerText = "WTF is CREATIVITY?";
 
 // Game window reference
 const gameWindow = document.getElementById("gameWindow");
