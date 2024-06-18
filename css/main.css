@@ -59,17 +59,17 @@ p {
 }
 
 #sign {
-    width: 26px;
-    height: 28px;
-    top: 433px;
-    left: 25px;
+    width: 191px;
+    height: 96px;
+    top: 211px;
+    left: 78px;
 }
 
-#statue {
-    width: 49px;
-    height: 62px;
-    top: 357px;
-    left: 399px;
+#rescue {
+    width: 804px;
+    height: 615px;
+    top: 2px;
+    left: -3px;
 }
 
 /*Inventory box*/
@@ -131,12 +131,6 @@ p {
     height: 68px;
 }
 
-#counterAvatar3 {
-    right: 0px;
-    bottom: 0px;
-    width: 72px;
-    height: 68px;
-}
 
 #counterAvatarImg {
     opacity: 0;
@@ -146,9 +140,6 @@ p {
     opacity: 0;
 }
 
-#counterAvatarImg3 {
-    opacity: 0;
-}
 
 #counterSpeech {
     right: 72px;

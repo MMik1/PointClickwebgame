@@ -1,37 +1,42 @@
-document.getElementById("mainTitle").innerText = "YOU ESCAPED THE BASEMENT GGS";
+document.getElementById("mainTitle").innerText = "Italie";
 
-//Game window reference
+// Game window reference
 const gameWindow = document.getElementById("gameWindow");
 
-//Game state
-gameState = {
-    "door2locked": true,
-    "booklocked": true,
-    "inventory": [
-    ]
-}
+// Game state
+const gameState = {
+    door2locked: true,
+    door1locked: true,
+    booklocked: true,
+    inventory: []
+};
 
 const sec = 1000;
 
-//Main Character
+// Main Character
 const mainCharacter = document.getElementById("mainCharacter");
 const offsetCharacter = 16;
 
-//speech bubbles
+// Speech bubbles
 const mainCharacterSpeech = document.getElementById("mainCharacterSpeech");
 const counterSpeech = document.getElementById("counterSpeech");
 const counterSpeech2 = document.getElementById("counterSpeech2");
 const mcAudio = document.getElementById("mcAudio");
 const cAudio = document.getElementById("cAudio");
-const eAudio = document.getElementById("eAudio");
-//Inventory
-const inventoryBox = document.getElementById("inventoryBox"); //div
-const inventoryList = document.getElementById("inventoryList"); //ul
+const kAudio = document.getElementById("kAudio");
+const krAudio = document.getElementById("krAudio");
+const dAudio = document.getElementById("dAudio");
+const pAudio = document.getElementById("pAudio");
+const draakAudio = document.getElementById("draakAudio");
+const mrAudio = document.getElementById("mrAudio");
 
-//Foreground Items
+// Inventory
+const inventoryBox = document.getElementById("inventoryBox"); // div
+const inventoryList = document.getElementById("inventoryList"); // ul
+
+// Foreground Items
 const door1 = document.getElementById("door1");
 const sign = document.getElementById("sign");
-
 
 gameWindow.onclick = function (e) {
     var rect = gameWindow.getBoundingClientRect();
@@ -44,65 +49,128 @@ gameWindow.onclick = function (e) {
 
     console.log(e.target.id);
     switch (e.target.id) {
-
-
-        case "credits":
-            showMessage(mainCharacterSpeech, mcAudio, "Made by Mans Mik");
-            setTimeout(function () { counterAvatarImg.style.opacity = 1; }, 4 * sec);
-            setTimeout(showMessage, 4 * sec, counterSpeech, eAudio, "BOOMM");
-            setTimeout(showMessage, 9 * sec, counterSpeech, cAudio, "Did i heard a explosion?");
-            setTimeout(showMessage, 14 * sec, mainCharacterSpeech, mcAudio, "I think so yea");
-            setTimeout(showMessage, 18 * sec, counterSpeech, cAudio, "I think the basement has been blownup by the chemicals");
-            setTimeout(showMessage, 23 * sec, mainCharacterSpeech, mcAudio, "In that case i would like to thank you for saving my live floris the statue");
-            setTimeout(showMessage, 28 * sec, mainCharacterSpeech, mcAudio, "And i also want to thank you Ricardo and Matthijs for this amazing experience website / game develoment in one");
-            setTimeout(function () { counterAvatarImg.style.opacity = 0; }, 38 * sec);
-            
-            if (document.getElementById("credits") !== null) {
-                console.log('Found credits!');
-                document.getElementById("credits").remove();
-                changeInventory('credits', 'add');
+        case "koelkast":
+            if (gameState.door2locked === true) {
+                if (document.getElementById("inv-ijsstaf") !== null) {
+                    gameState.door2locked = false;
+                    changeInventory('ijsstaf', 'delete');
+                    console.log('Door unlocked!');
+                    showMessage(mainCharacterSpeech, mcAudio, "Prinses Elsa");
+                    setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "Ik kom u redden");
+                    setTimeout(showMessage, 13 * sec, mainCharacterSpeech, mcAudio, "*Gebruikt ijsstaf* ");
+                    setTimeout(showMessage, 19 * sec, mainCharacterSpeech, mcAudio, "*Loopt de ijstrap op*");
+                    setTimeout(showMessage, 25 * sec, mainCharacterSpeech, mcAudio, "*Breekt Het ijskooi*");
+                    setTimeout(showMessage, 30 * sec, mainCharacterSpeech, mcAudio, "*Geeft Elsa een kus*");
+                    setTimeout(function() {
+                        window.location.href = 'secondlvl.html';
+                    }, 6000);
+                } else {
+                    alert("Je moet eerst nog je ijskrachten krijgen voordat je prinses kan redden.");
+                }
+            } else {
+                console.log('Koelkast geopend');
             }
+            break;
 
+        case "sign":
+            if (gameState.booklocked === true) {
+                if (document.getElementById("inv-AfterEffects") !== null) {
+                    gameState.booklocked = false;
+                    changeInventory('AfterEffects', 'delete');
+                    console.log('Door unlocked!');
+                    sign.style.opacity = 0.5;
+                    showMessage(mainCharacterSpeech, mcAudio, "Nu ik mijn tune heb moet ik photoshop gebruiken om mooie vormpjes te maken.");
+                    setTimeout(showMessage, 5 * sec, mainCharacterSpeech, mcAudio, "En daar mee gekke edits maken");
+                    setTimeout(showMessage, 10 * sec, mainCharacterSpeech, mcAudio, "Tijd om te knutselen");
+                    setTimeout(showMessage, 15 * sec, mainCharacterSpeech, cAudio, "*Werk geluid*");
+                    setTimeout(showMessage, 20 * sec, mainCharacterSpeech, mcAudio, "Oke mijn tijd zit er op geniet van de eind show!");
+                    setTimeout(function() {
+                        window.location.href = 'https://www.youtube.com/watch?v=CkTHzwYfx14';
+                    }, 25000);
+                    if (document.getElementById("book") !== null) {
+                        console.log('Found key!');
+                        document.getElementById("book").remove();
+                        changeInventory('book', 'add');
+                    }
+                } else {
+                    alert("Poort is gesloten");
+                }
+            } else {
+                console.log('Book geopend');
+            }
+            break;
+
+        case "door1":
+            if (gameState.door1locked === true) {
+                if (document.getElementById("inv-book") !== null) {
+                    gameState.door1locked = false;
+                    changeInventory('book', 'delete');
+                    console.log('Door unlocked!');
+                    changeInventory('ijsstaf', 'add');
+                    sign.style.opacity = 0.5;
+                    showMessage(mainCharacterSpeech, mcAudio, "De ijsdraak");
+                    setTimeout(function () { counterAvatarImg2.style.opacity = 1; }, 5 * sec);
+                    setTimeout(showMessage, 5 * sec, counterSpeech, draakAudio, "*Gromt*.");
+                    setTimeout(showMessage, 10 * sec, mainCharacterSpeech, mcAudio, "Ijsdraak ik hen uw hulp nodig prinses Elsa");
+                    setTimeout(showMessage, 15 * sec, mainCharacterSpeech, mcAudio, "Is gevangen genomen door de ijskoning.");  
+                    setTimeout(showMessage, 20 * sec, counterSpeech, draakAudio, "De ijskoning *gromt hard*");
+                    setTimeout(showMessage, 25 * sec, counterSpeech, draakAudio, "Ik geef u de ijskrachten heer Polar piet ");
+                    setTimeout(showMessage, 30 * sec, mainCharacterSpeech, mcAudio, "Hoe kent u mijn naam?");
+                    setTimeout(showMessage, 35 * sec, counterSpeech, draakAudio, "Ik was de persoon die u de visioenen gaf");
+                    setTimeout(showMessage, 40 * sec, mainCharacterSpeech, mcAudio, "Weet u ook waar Elsa zich bevind?");
+                    setTimeout(showMessage, 45 * sec, counterSpeech, draakAudio, "Elsa zit de skull grot gevangen in een ijskooi ");
+                    setTimeout(function () { counterAvatarImg2.style.opacity = 0; }, 50 * sec);
+                    if (document.getElementById("book") !== null) {
+                        console.log('Found key!');
+                        document.getElementById("book").remove();
+                    }
+                } else {
+                    alert("Draak moet nog opladen");
+                }
+            } else {
+                console.log('Draak geopend');
+            }
+            break;
+
+        case "AfterEffects":
+            showMessage(mainCharacterSpeech, mcAudio, "Eindelijk Periode twee is aangebroken.");
+            setTimeout(showMessage, 4 * sec, mainCharacterSpeech, mcAudio, "Tijd om mijn eigen bubbeltje in te stappen");
+            setTimeout(showMessage, 9 * sec, mainCharacterSpeech, mcAudio, "Prinses Elsa redden was zwaar namelijk");
+            setTimeout(showMessage, 15 * sec, mainCharacterSpeech, mcAudio, "Bij video mapping leer je gebruik te maken van After-Effects met behulp van muziek");
+            setTimeout(showMessage, 20 * sec, counterSpeech, mrAudio, "*Muziek speelt af*");
+            setTimeout(showMessage, 26 * sec, mainCharacterSpeech, mcAudio, "Dit is een gekke tune");
+            setTimeout(showMessage, 32 * sec, mainCharacterSpeech, mcAudio, "Ik denk dat ik naar het eiland toe moet gaan op de kaart moet gaan.");
+            if (document.getElementById("AfterEffects") !== null) {
+                console.log('Found key!');
+                document.getElementById("AfterEffects").remove();
+                changeInventory('AfterEffects', 'add');
+            }
             break;
 
         default:
-            //explode
-
-
             sign.style.opacity = 1;
             break;
-
     }
-
-}
+};
 
 /**
- * function to change inventory
+ * Function to change inventory
  * @param {string} itemName 
  * @param {string} action "add", "delete"
- * @returns 
  */
 function changeInventory(itemName, action) {
     if (itemName == null || action == null) {
-        console.log('wrong parameters given to changeInventory()');
-        return
+        console.log('Wrong parameters given to changeInventory()');
+        return;
     }
 
     switch (action) {
         case 'add':
             gameState.inventory.push(itemName);
-            break
+            break;
         case 'delete':
-            gameState.inventory.find(function (item, index) {
-                if (item == itemName) {
-                    var index = gameState.inventory.indexOf(item);
-                    if (index !== -1) {
-                        gameState.inventory.splice(index, 1);
-                    }
-                }
-            })
-            break
-
+            gameState.inventory = gameState.inventory.filter(item => item !== itemName);
+            break;
         default:
             break;
     }
@@ -110,7 +178,7 @@ function changeInventory(itemName, action) {
 }
 
 /**
- * update inventoryList
+ * Update inventoryList
  * @param {Array} inventory array of items 
  * @param {HTMLElement} inventoryList html <ul> element 
  */
@@ -121,13 +189,13 @@ function updateInventory(inventory, inventoryList) {
         inventoryItem.id = "inv-" + item;
         inventoryItem.innerText = item;
         inventoryList.appendChild(inventoryItem);
-    })
+    });
 }
 
 /**
  * Shows a message in a speech bubble
- * @param {getElementById} targetBalloon 
- * @param {getElementById} targetSound 
+ * @param {HTMLElement} targetBalloon 
+ * @param {HTMLElement} targetSound 
  * @param {string} message 
  */
 function showMessage(targetBalloon, targetSound, message) {
@@ -140,8 +208,8 @@ function showMessage(targetBalloon, targetSound, message) {
 
 /**
  * Set the opacity to 0
- * @param {getElementById} targetBalloon 
- * @param {getElementById} targetSound 
+ * @param {HTMLElement} targetBalloon 
+ * @param {HTMLElement} targetSound 
  */
 function hideMessage(targetBalloon, targetSound) {
     targetSound.pause();

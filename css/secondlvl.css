@@ -49,13 +49,29 @@ p {
     opacity: 1;
     top: 66px;
     left: 480px;
+    background-color: #000000;
 }
 
-#credits {
-    width: 49px;
-    height: 62px;
-    top: 115px;
-    left: 436px;
+#koelkast {
+    width: 55px;
+    height: 128px;
+    top: 116px;
+    left: 651px;
+    background-color: #e62e2e;
+}
+
+#sign {
+    width: 146px;
+    height: 209px;
+    top: 371px;
+    left: 105px;
+}
+
+#AfterEffects {
+    width: 804px;
+    height: 615px;
+    top: 2px;
+    left: -3px;
 }
 
 /*Inventory box*/
@@ -117,12 +133,6 @@ p {
     height: 68px;
 }
 
-#counterAvatar3 {
-    right: 0px;
-    bottom: 0px;
-    width: 72px;
-    height: 68px;
-}
 
 #counterAvatarImg {
     opacity: 0;
@@ -132,9 +142,6 @@ p {
     opacity: 0;
 }
 
-#counterAvatarImg3 {
-    opacity: 0;
-}
 
 #counterSpeech {
     right: 72px;
